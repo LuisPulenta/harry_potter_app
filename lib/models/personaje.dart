@@ -1,12 +1,12 @@
 class Personaje {
   int id = 0;
-  String personaje = '';
-  String apodo = '';
-  bool estudianteDeHogwarts = false;
-  String casaDeHogwarts = '';
-  String interpretadoPor = '';
+  String? personaje = '';
+  String? apodo = '';
+  bool? estudianteDeHogwarts = false;
+  String? casaDeHogwarts = '';
+  String? interpretadoPor = '';
   List<String>? hijos = [];
-  String imagen = '';
+  String? imagen = '';
 
   Personaje(
       {required this.id,
@@ -25,7 +25,12 @@ class Personaje {
     estudianteDeHogwarts = json['estudianteDeHogwarts'];
     casaDeHogwarts = json['casaDeHogwarts'];
     interpretadoPor = json['interpretado_por'];
-    hijos = json['hijos'].cast<String>();
+    if (json['hijos'] != null) {
+      hijos = [];
+      json['hijos'].forEach((v) {
+        hijos!.add((v));
+      });
+    }
     imagen = json['imagen'];
   }
 

@@ -7,7 +7,7 @@ class ApiHelper {
 //---------------------------------------------------------------------------
   static Future<Response> getPersonajes() async {
     var url = Uri.parse(Constants.apiUrlPersonajes);
-    var response = await http.post(
+    var response = await http.get(
       url,
       headers: {
         'content-type': 'application/json',
@@ -33,7 +33,7 @@ class ApiHelper {
   //---------------------------------------------------------------------------
   static Future<Response> getHechizos() async {
     var url = Uri.parse(Constants.apiUrlHechizos);
-    var response = await http.post(
+    var response = await http.get(
       url,
       headers: {
         'content-type': 'application/json',

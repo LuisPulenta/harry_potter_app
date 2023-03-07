@@ -37,6 +37,8 @@ dependencies:
   flutter_launcher_icons: ^0.9.2
   flutter_native_splash: ^1.2.4
   http: ^0.13.3                   # Para consumir APIs 
+  connectivity: ^3.0.6            # Para chequear conexión a Internet
+  adaptive_dialog: ^1.1.0         # Para cuadros de diálogo
 
 
 flutter_icons:
